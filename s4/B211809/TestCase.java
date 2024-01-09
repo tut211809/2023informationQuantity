@@ -48,7 +48,7 @@ public class TestCase {
 	// Test Case: Target length greater than remaining space length
 	myObject = new Frequencer();
 	myObject.setSpace("Hi Ho Hi Ho".getBytes());
-	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
+	myObject.setTarget("".getBytes()); // Target length is greater than space length
 	try {
     		freq = myObject.frequency();
     		// If the exception is not thrown, the test fails
