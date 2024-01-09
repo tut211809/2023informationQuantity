@@ -62,6 +62,7 @@ public class TestCase {
 	myObject.setSpace("Hi Ho Hi Ho".getBytes());
 	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
 	freq = myObject.frequency();
+	System.out.printf(freq);
 	assert freq == 1: "something wrong";
 
 	System.out.printf("check4");
