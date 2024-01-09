@@ -65,7 +65,11 @@ public class TestCase {
 	assert freq == 2: "something wrong";
 
 	System.out.printf("check4");
-	
+	 
+	myObject.setSpace("Hi Ho Hi Ho".getBytes());
+	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
+	freq = myObject.subByteFrequency(0, 5);
+	assert freq == 2: "something wrong";
 
 
 	}
