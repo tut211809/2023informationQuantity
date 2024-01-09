@@ -45,18 +45,22 @@ public class TestCase {
 	    freq = myObject.frequency();
 	    assert freq == 4: "Hi Ho Hi Ho, H: " + freq;
 	    // Write your testCase here
-	// Test Case: Target length greater than remaining space length
-	myObject = new Frequencer();
+
 	myObject.setSpace("Hi Ho Hi Ho".getBytes());
 	myObject.setTarget("".getBytes()); // Target length is greater than space length
-	try {
-    		freq = myObject.frequency();
-    		// If the exception is not thrown, the test fails
-    		assert false : "Expected ArrayIndexOutOfBoundsException, but the frequency is: " + freq;
-	} catch (ArrayIndexOutOfBoundsException e) {
-    	// If the exception is caught, the test passes
-    		assert true;
-	}
+	freq = myObject.frequency();
+	assert freq == -1: "target is not null";
+
+	myObject.setSpace("".getBytes());
+	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
+	freq = myObject.frequency();
+	assert freq == 0: "space is not null";
+
+	myObject.setSpace("Hi Ho Hi Ho".getBytes());
+	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
+	freq = myObject.frequency();
+	assert freq == 4: "something wrong";
+	
 
 
 	}
