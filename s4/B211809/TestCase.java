@@ -46,20 +46,25 @@ public class TestCase {
 	    assert freq == 4: "Hi Ho Hi Ho, H: " + freq;
 	    // Write your testCase here
 
+	System.out.printf("check");
 	myObject.setSpace("Hi Ho Hi Ho".getBytes());
 	myObject.setTarget("".getBytes()); // Target length is greater than space length
 	freq = myObject.frequency();
 	assert freq == -1: "target is not null";
-
+	
+	System.out.printf("check");
 	myObject.setSpace("".getBytes());
 	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
 	freq = myObject.frequency();
 	assert freq == 0: "space is not null";
 
+	System.out.printf("check");
 	myObject.setSpace("Hi Ho Hi Ho".getBytes());
 	myObject.setTarget("Hi Ho Hi Ho".getBytes()); // Target length is greater than space length
 	freq = myObject.frequency();
 	assert freq == 4: "something wrong";
+
+	System.out.printf("check");
 	
 
 
